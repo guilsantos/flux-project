@@ -2,19 +2,23 @@
 
 To start this project just start the docker container
 
-### `$ docker-compose up`
+### `$ docker-compose up dev`
 
 And open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### `$ docker-compose up test`
+
+Terminal whil stay looking for modifications in the code to run the tests.
 
 ## Docker commands
 
 You can build the dev image whith
 
-```$ docker build -t sample:dev .```
+```$ docker build -t flux-app:dev .```
 
 Spin up the container
 
-```$ docker run -it --rm -v ${PWD}:/app -v /app/node_modules -p 3001:3000 -e CHOKIDAR_USEPOLLING=true sample:dev```
+```$ docker run -it --rm -v ${PWD}:/app -v /app/node_modules -p 3001:3000 -e CHOKIDAR_USEPOLLING=true flux-app:dev```
 
 Build with docker-compose
 

@@ -2,8 +2,8 @@ version: '3.7'
 
 services:
 
-  sample:
-    container_name: sample
+  dev:
+    container_name: flux-app-dev
     build:
       context: .
       dockerfile: Dockerfile
@@ -17,3 +17,15 @@ services:
 
     stdin_open: true
     tty: true
+
+  test:
+    container_name: flux-app-test
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    # environment:
+    #   - CI=true
+    command: npm test
