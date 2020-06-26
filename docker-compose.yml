@@ -29,3 +29,13 @@ services:
     # environment:
     #   - CI=true
     command: npm test
+
+  prod:
+    container_name: flux-app-prod
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - '3001:80'
+    environment:
+      - NODE_ENV=production

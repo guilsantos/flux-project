@@ -1,4 +1,6 @@
-### Getting started
+# Flux project
+
+## Getting started
 
 To start this project just start the docker container
 
@@ -9,6 +11,10 @@ And open [http://localhost:3000](http://localhost:3000) to view it in the browse
 ### `$ docker-compose up test`
 
 Terminal whil stay looking for modifications in the code to run the tests.
+
+### `$ docker-compose up prod`
+
+Building the project to production on port 3001, served with nginx.
 
 ## Docker commands
 
