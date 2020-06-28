@@ -6,7 +6,7 @@ services:
     container_name: flux-app-dev
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     volumes:
       - '.:/app'
       - '/app/node_modules'
@@ -22,7 +22,7 @@ services:
     container_name: flux-app-test
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     volumes:
       - '.:/app'
       - '/app/node_modules'

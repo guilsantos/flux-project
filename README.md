@@ -16,6 +16,16 @@ Terminal whil stay looking for modifications in the code to run the tests.
 
 Building the project to production on port 3001, served with nginx.
 
+## GCP deploy
+
+To configure gcloud cli
+
+### `$ gcloud init`
+
+To make the deploy on the configured project
+
+### `$ gcloud app deploy`
+
 ## Docker commands
 
 You can build the dev image whith
