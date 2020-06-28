@@ -1,0 +1,34 @@
+name: CI
+ 
+on:
+  push:
+    branches: [ master ]
+ 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+     
+    steps:
+    - uses: actions/checkout@v2
+ 
+    - name: Set up node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12'
+
+    - name: Install
+      run: npm install
+
+    - name: Test
+      run: npm test
+ 
+    - name: Build
+      run: npm build
+ 
+    - uses: actions/gcloud/auth@master
+      env:
+        GCLOUD_AUTH: ${{ secrets.GCLOUD_AUTH }}
+ 
+    - uses: actions/gcloud/cli@master
+      with:
+        args: "app deploy --quiet --project=APP_ENGINE_PN"
