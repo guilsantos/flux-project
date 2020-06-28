@@ -10,6 +10,8 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <Title>
           Minha esposa Brenda é <span>MARAVILHOSA</span> S2
+
+          E o deploy pelo pipeline esta funcionando como o esperado =D
         </Title>
         <a
           className="App-link"
