@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Title>
-          Novo titulo que adicionei
+          Alteração de código feita pelo codesandbox
         </Title>
         <img src={logo} className="App-logo" alt="logo" />
         <Title>
